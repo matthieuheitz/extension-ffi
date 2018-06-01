@@ -9,12 +9,12 @@ headers = ['src/my_lib.h']
 defines = []
 with_cuda = False
 
-if torch.cuda.is_available():
-    print('Including CUDA code.')
-    sources += ['src/my_lib_cuda.c']
-    headers += ['src/my_lib_cuda.h']
-    defines += [('WITH_CUDA', None)]
-    with_cuda = True
+# if torch.cuda.is_available():
+#     print('Including CUDA code.')
+#     sources += ['src/my_lib_cuda.c']
+#     headers += ['src/my_lib_cuda.h']
+#     defines += [('WITH_CUDA', None)]
+#     with_cuda = True
 
 ffi = create_extension(
     '_ext.my_lib',

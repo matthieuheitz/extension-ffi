@@ -17,8 +17,3 @@ x = torch.range(1, 25).view(5, 5)
 input1, input2 = Variable(x), Variable(x * 4)
 print(model(input1, input2))
 print(input1 + input2)
-
-if torch.cuda.is_available():
-    input1, input2, = input1.cuda(), input2.cuda()
-    print(model(input1, input2))
-    print(input1 + input2)
